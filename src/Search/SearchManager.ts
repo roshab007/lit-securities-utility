@@ -83,7 +83,6 @@ class SearchManager {
           workerResults[workerIndex] = searchResult
           if (resultCount === this.WORKER.length) {
             const searchResult = this._flattenResult(workerResults)
-            console.log(searchResult, 'searchResult')
             resolve(searchResult)
           }
         }

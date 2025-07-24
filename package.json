@@ -1,6 +1,6 @@
 {
   "name": "lit-securities-utility",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A utility package for securities applications",
   "sideEffects": false,
   "types": "dist/index.d.ts",
