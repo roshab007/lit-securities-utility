@@ -49,8 +49,17 @@ export default class DownloadManager {
    */
   constructor(secMasterURL: string, config: IConfig) {
     this.worker = new DownloadWorker()
+    const { onsuccess, onerror, ...serializableConfig } = config
+    this.onsuccess = onsuccess
+    this.onerror = onerror
 
-    this.worker.postMessage({ action: 'INIT', data: { config, secMasterURL } })
+    this.worker.postMessage({
+      action: 'INIT',
+      data: {
+        secMasterURL,
+        config: serializableConfig
+      }
+    })
     this.worker.onmessage = this.onMessage
     this.worker.onerror = this.onError
     this.onsuccess = config.onsuccess
