@@ -1,0 +1,39 @@
+{
+  "name": "lit-securities-utility",
+  "version": "1.0.0",
+  "description": "A utility package for securities applications",
+  "sideEffects": false,
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "type": "module",
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && vite build",
+    "prepublishOnly": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roshab007/lit-securities-utility"
+  },
+  "homepage": "https://github.com/roshab007",
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "^7.0.5",
+    "vite-plugin-dts": "^4.5.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "keywords": [
+    "securities",
+    "Sec Master"
+  ],
+  "dependencies": {
+    "fuzzysort": "^3.1.0"
+  }
+}
