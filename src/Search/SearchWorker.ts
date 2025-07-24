@@ -46,7 +46,6 @@ class SearchWorker {
     let searchResult: any[] = []
 
     // loop over this.FUSES and call search method
-    console.time(`fuseSearch ${this.INDEX}`)
     // const sResult = new Promise.all()
     this.FUSES.forEach((fuseInstance: any) => {
       // const result = fuseInstance.search(searchString, { limit: 40 })
@@ -60,7 +59,6 @@ class SearchWorker {
         return a.obj.searchPriority - b.obj.searchPriority
       })
       .sort((a, b) => b.score - a.score)
-    console.timeEnd(`fuseSearch ${this.INDEX}`)
     return searchResult
   }
 
